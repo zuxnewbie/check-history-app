@@ -1,0 +1,336 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --color-background: #5ab2ff;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-navbar: #0d6efd;
+
+    --color-text-white: #fff;
+    --color-text-secondary: #fff;
+    --color-background-admin-page: #f6f6f6;
+
+    --color-background-admin-page: #f6f6f6;
+    --color-background-skeleton: #e0e0e0;
+    --color-fill-input: #eaf0f7;
+
+    --color-grey-100: #f3f4f6;
+    --color-grey-200: #e5e7eb;
+    --color-grey-300: #d1d5db;
+    --color-grey-400: #9ca3af;
+    --color-grey-500: #6b7280;
+    --color-grey-600: #4b5563;
+    --color-grey-700: #374151;
+    --color-grey-800: #1f2937;
+    --color-grey-900: #111827;
+
+    --color-nude-400: #ffec9e; // Color common
+
+    --color-red-400: #ff6868; // Color common
+    --color-red-500: #ff2f2f;
+    --color-red-600: #dc2626;
+    --color-red-700: #b91c1c;
+    --color-red-800: #991b1b;
+    --color-red-900: #7f1d1d;
+
+    --color-black-400: #fff;
+    --color-black-500: #fff;
+    --color-black-600: #fff;
+    --color-black-700: #fff;
+    --color-black-800: #fff;
+    --color-black-900: #fff;
+
+    --color-blue-400: #6fb1fc;
+    --color-blue-500: #568de5;
+    --color-blue-600: #2563eb; // Color common
+    --color-blue-700: #1d4ed8;
+    --color-blue-800: #1e40af;
+    --color-blue-900: #1e3a8a;
+
+    --color-yellow-400: #ffd764;
+    --color-yellow-500: #fbbc05; // Color common
+    --color-yellow-600: #ffa412; // Color common
+    --color-yellow-700: #a16207;
+    --color-yellow-800: #854d0e;
+    --color-yellow-900: #713f12;
+
+    --color-blue-400: #38bdf8;
+    --color-blue-500: #0ea5e9;
+    --color-blue-600: #386bf6; // Color common
+    --color-blue-700: #1d4ed8;
+    --color-blue-800: #1e40af;
+    --color-blue-900: #1e3a8a;
+
+    --color-green-400: #4ade80;
+    --color-green-500: #4fc345; // Color common
+    --color-green-600: #16a34a;
+    --color-green-700: #15803d;
+    --color-green-800: #166534;
+    --color-green-900: #14532d;
+
+    --color-violet-400: #a78bfa;
+    --color-violet-500: #8b5cf6;
+    --color-violet-600: #7c3aed;
+    --color-violet-700: #6d28d9;
+    --color-violet-800: #4a3de5; // Color common
+    --color-violet-900: #4c1d95;
+
+    --color-orange-400: #fb923c;
+    --color-orange-500: #f97316;
+    --color-orange-600: #ea580c;
+    --color-orange-700: #c2410c;
+    --color-orange-800: #9a3412;
+    --color-orange-900: #7c2d12;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+}
+
+html {
+    @media screen and (max-width: 99999px) {
+        font-size: 62.5%;
+    }
+
+    @media screen and (max-width: 1024px) {
+        font-size: 57.5%;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 52.5%;
+    }
+
+    @media screen and (max-width: 480px) {
+        font-size: 47.5%;
+    }
+
+    scroll-behavior: smooth;
+
+    ::-webkit-scrollbar {
+        width: 1rem;
+        height: 5px;
+        background-color: var(--color-grey-100);
+        border-radius: 1rem;
+    }
+
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 1rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--color-grey-400);
+        border-radius: 1rem;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--color-grey-800);
+    }
+
+    .ant-btn {
+        line-height: 1 !important;
+    }
+
+    .hiden {
+        display: none;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    p {
+        line-height: 1.7;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        overflow-wrap: break-word;
+        hyphens: auto;
+        line-height: 1.4;
+        padding: 1rem 0;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    strong,
+    em {
+        font-size: inherit;
+    }
+
+    span {
+        display: inline-block;
+    }
+}
+
+.container-pub {
+    @media screen and (min-width: 1200px) {
+        width: 1200px !important;
+    }
+
+    @media screen and (max-width: 1200px) {
+        width: 95vw !important;
+    }
+}
+
+h1 {
+    font-size: 3.2rem !important;
+
+    * {
+        font-size: 3.2rem !important;
+    }
+}
+
+h2 {
+    font-size: 2.8rem !important;
+
+    * {
+        font-size: 2.8rem !important;
+    }
+}
+
+h3 {
+    font-size: 2.4rem !important;
+
+    * {
+        font-size: 2.4rem !important;
+    }
+}
+
+h4 {
+    font-size: 2rem !important;
+
+    * {
+        font-size: 2rem !important;
+    }
+}
+
+h5 {
+    font-size: 1.8rem !important;
+
+    * {
+        font-size: 1.8em !important;
+    }
+}
+
+h6 {
+    font-size: 1.6rem !important;
+
+    * {
+        font-size: 3.2rem !important;
+    }
+}
+
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1024px;
+$breakpoint-xll: 1200px;
+$breakpoint-wide: 1400px;
+
+.not-found {
+    background: #f6f6f6;
+    display: flex;
+    align-items: center;
+    height: 100vh !important;
+    max-height: 100vh;
+    overflow: hidden;
+    box-sizing: content-box;
+
+    .not-found-left {
+        height: 130%;
+        position: relative;
+        flex-basis: calc(40%);
+
+        @media (max-width: $breakpoint-xl) {
+            display: none;
+        }
+
+        .not-found-rotate {
+            height: 100%;
+
+            img {
+                transform: rotate(-6deg);
+                height: 130vh !important;
+            }
+        }
+
+        .not-found-thumb {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(25%, -50%);
+            z-index: 3;
+        }
+    }
+
+    .not-found-right {
+        flex-basis: calc(60%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #000;
+        text-align: center;
+
+        @media (max-width: $breakpoint-xl) {
+            flex-basis: calc(100%);
+        }
+
+        h1 {
+            font-size: 8rem !important;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: 4px;
+        }
+
+        h2 {
+            font-size: 4.4rem !important;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+
+            @media (max-width: $breakpoint-sm) {
+                font-size: 3.2rem !important;
+            }
+        }
+
+        p {
+            padding: 2.2rem 0.4rem;
+            text-align: center;
+            font-size: 2rem;
+            line-height: 2.8rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .not-found-button {
+            padding: 1.3rem 2.4rem;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+        }
+    }
+}
+
+
+.ant-modal-confirm-paragraph{
+    width: 80% !important;
+}
